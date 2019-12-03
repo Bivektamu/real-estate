@@ -10,19 +10,17 @@ class FeaturedProperty extends React.Component {
         this.props.fetchProperties();
     }
 
-    renderProperty() {
-        const eachProperty = this.props.properties.map(
-            property => {
-                const {featured} = property;
+    renderProperty = () =>  {
+        const eachProperty = this.props.properties.map( property => {
+                const {featured, id} = property;
                 if(featured) {
                     return (
-                        <PropertyCard property={property} />
+                        <PropertyCard property={property} key= {id} />
                     )
                 }
             }
         );
 
-        console.log(eachProperty);
         return eachProperty;
     }
 
@@ -30,11 +28,14 @@ class FeaturedProperty extends React.Component {
         if (!this.props.properties) {
             return ('Loading');
         }
-        
-        
         return (
-            <div>
-                {this.renderProperty()}
+            <div className="container">
+                <div className="row justify-content-center">
+                    <h1 className="my-5 text-center">{this.props.title}</h1>
+                </div>
+                <div className="row">
+                    {this.renderProperty()}
+                </div>
             </div>
             )
         }
