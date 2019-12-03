@@ -11,7 +11,19 @@ const propertyReducer = (state = {}, action) => {
     }
 }
 
+const sortedPropertyReducer = (state = {}, action) => {
+    switch (action.type) {
+       
+        case 'FETCH_SORTED_PROPERTIES':
+            return { ..._.mapKeys(action.payload, 'id')};
+
+        default:
+            return state;
+    }
+}
+
 export default combineReducers({
-    properties: propertyReducer
+    properties: propertyReducer,
+    sortedOne: sortedPropertyReducer
 });
 

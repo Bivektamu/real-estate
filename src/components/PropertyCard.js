@@ -1,7 +1,6 @@
 import React from 'react';
 import {Link} from 'react-router-dom';
 const PropertyCard = (props) => {
-    console.log(props.property);
     const {id, img, title, price, location, size, bed, bath, status} = props.property;
     return (
 
