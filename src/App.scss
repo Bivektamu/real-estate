@@ -60,7 +60,7 @@ header nav.navbar {
       position: absolute;
       content: '';
       // width: 100%;
-      height: 5px;
+      height: 3px;
       left: 0;
       right: 0;
       margin: auto;
@@ -93,6 +93,9 @@ header nav.navbar {
   background:url('/img/home-banner.png') center no-repeat;
   background-size: cover;
   margin-bottom: 4rem;
+  &.property {
+    height: 75vh;
+  }
   &:after {
     background: #001D38;
     position: absolute;
@@ -188,6 +191,70 @@ footer {
       &:after {
         display: none;
       }
+    }
+  }
+}
+
+
+div#property-filter {
+  position: relative;
+  top:-130px;
+
+  #filter-form {
+    border-radius: 10px;
+    background: var(--mainBlue);
+    color: var(--lightWhite);
+    max-width: 900px;
+    label {
+      display: block;
+      color: var(--lightOrange);
+    }
+    
+    select {
+      background: var(--mainBlue);
+      border:1px solid var(--lightWhite);
+      padding: 10px;
+      border-radius: 5px;
+      color: var(--lightWhite);
+      text-transform: capitalize;
+      option {
+        background: var(--lightWhite);
+        color: var(--mainBlue);
+      }
+    }
+
+    div#range-wrapper {
+      position: relative;
+      input {
+        display: inline-block;
+        width: calc(100% - 80px);
+      }
+      input {
+        &::-webkit-slider-thumb {
+          background: var(--lightOrange);
+        }
+        &::-webkit-slider-runnable-track {
+          height: .4rem;
+        }
+      } 
+      span {
+        display: inline-block;;
+        color: var(--mainWhite);
+        width: 40px;
+        position: relative;
+        top:-8px;
+        letter-spacing: 1px;
+        font-size: 12px;
+        background: var(--lightOrange);
+        border-radius: 5px;
+        padding: 2px 0;
+        text-align: center;
+        // height: 22px;
+
+      
+      }
+
+      
     }
   }
 }

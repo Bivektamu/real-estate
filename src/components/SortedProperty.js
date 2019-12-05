@@ -10,7 +10,7 @@ class SortedProperty extends React.Component {
 
     componentDidMount() {
         this.props.fetchProperties();
-        this.props.fetchSortedProperties("bed", "all");
+        this.props.fetchSortedProperties();
     }
     
     renderProperty = () =>  {
@@ -26,9 +26,27 @@ class SortedProperty extends React.Component {
     }
 
     render() {
+
         if (!this.props.filteredProperties) {
             return ('Loading');
         }
+
+        const renderTitle = () => {
+            const totalFiltered = this.props.filteredProperties.length;
+            if(totalFiltered < 1) {
+                return ('Sorry! No Properties found')
+            }
+            else if(totalFiltered < 2) {
+                return ('1 Property found')
+            }
+            else {
+                return (
+                    <span>
+                        {totalFiltered} Properties found
+                    </span>)
+            }
+        };
+
         return (
             <React.Fragment>
                 <div id="property-filter">
@@ -36,7 +54,7 @@ class SortedProperty extends React.Component {
                 </div>
                 <div className="container">
                     <div className="row justify-content-center">
-                        <h1 className="my-5 text-center">{this.props.title}</h1>
+                    <h3 className="mb-5 text-center">{renderTitle()}</h3>
                     </div>
                     <div className="row">
                         {this.renderProperty()}

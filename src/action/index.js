@@ -7,21 +7,38 @@ export const fetchProperties = () => (dispatch) => {
     });
 }
 
-export const fetchSortedProperties = (type, value) => (dispatch) => {
+
+
+export const fetchSortedProperties = (location, bed, bath, price, pets) => (dispatch) => {
     
-    if(type  === "bed"  && value === "all") {
-        dispatch({
-            type: 'FETCH_SORTED_PROPERTIES',
-            payload: propertyStore
-        });
+
+    let properties = propertyStore;
+    
+    // console.log(location, bed);
+
+    if(location !== undefined && location !== "all") {
+        properties = properties.filter(property => property.location === location);
     }
 
-    else {
-
-        const  filtered = propertyStore.filter(property => property.bed === parseInt(value));
-        dispatch({
-            type: 'FETCH_SORTED_PROPERTIES',
-            payload: filtered
-        });
+    if( bed !== undefined && bed !== "all") {
+        properties = properties.filter(property => property.bed === parseInt(bed));
     }
+
+    if( bath !== undefined && bath !== "all") {
+        properties = properties.filter(property => property.bath === parseInt(bath));
+    }
+
+    if(price !== undefined) {
+        properties = properties.filter(property => property.price <=price )
+    }
+
+    if(pets !== undefined && pets!==false) {
+        properties = properties.filter(property => property.pets === true )
+    }
+
+
+    dispatch({
+        type: 'FETCH_SORTED_PROPERTIES',
+        payload: properties
+    });
 }
