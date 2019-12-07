@@ -52,7 +52,7 @@ export const propertyStore = [
         title: "Comfortable Apartment in Palace",
         location:'Canberra',
         address: '32 Park Street, Yennora, 2004',
-        featured: true,
+        featured: false,
         price: 20,
         status:'rent',
         size: 1200,
