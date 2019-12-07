@@ -110,28 +110,28 @@ constructor(props) {
                     {/* <h1 id="search-title">Search Property</h1> */}
                     <form id="filter-form" className="container-md px-4 py-4 " onChange={this.sortProperty} >
                         <div className="row justify-content-between">
-                            <div className=" col-md-auto">
+                            <div className=" col-sm-12 col-md-auto">
                                 <label>Location</label>
                                 <select name="location" >
                                     {this.sortTypes('location')}
                                 </select>
                             </div>
 
-                            <div className="col-md-auto">
+                            <div className="col-sm-12 col-md-auto">
                                 <label>Bed Room</label>
                                 <select name="bed" className="pr-5">
                                     {this.sortTypes('bed')}
                                 </select>
                             </div>
 
-                            <div className="col-md-auto">
+                            <div className="col-sm-12 col-md-auto">
                                 <label>Bath Room</label>
                                 <select name="bath" className="pr-5">
                                     {this.sortTypes('bath')}
                                 </select>
                             </div>
 
-                            <div className="col-md-auto">
+                            <div className="col-sm-12 col-md-auto">
                                 <label>Price ($)</label>
                                 <div id="range-wrapper">
                                     <span id="min">{minPrice}k</span>
@@ -140,7 +140,7 @@ constructor(props) {
                                 </div>
                             </div>
 
-                            <div className="col-md-auto">
+                            <div className="col-sm-12 col-md-auto">
                                 <label>Pets</label>
                                 <input name="pets" type="checkbox"></input>
                             </div>

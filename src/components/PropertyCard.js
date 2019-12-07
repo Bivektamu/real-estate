@@ -4,7 +4,7 @@ const PropertyCard = (props) => {
     const {id, img, title, price, location, size, bed, bath, status} = props.property;
     return (
 
-        <div className="col-9 col-md-6 col-lg-4 my-3">
+        <div className="col-12 col-md-6 col-lg-4 my-3">
             <div className="card">
                 <div className="img-container">
                     <span className="status" id={status}>For {status}</span>

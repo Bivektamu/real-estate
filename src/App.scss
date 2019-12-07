@@ -12,9 +12,28 @@
   --mainGreen:#00D363;
 }
 
+.white {
+  color: var(--mainWhite);
+}
+
+.orange {
+  color: var(--lightOrange);
+}
+
+.grey {
+  color: var(--grey);
+}
+
+.red {
+  color: var(--mainRed);
+}
 
 .border-top {
   border-top:1px solid;
+}
+
+.fs1rem {
+  font-size: 1rem;
 }
 
 html {
@@ -258,3 +277,43 @@ div#property-filter {
     }
   }
 }
+
+
+#main.property-details {
+  padding-top: 12rem;
+  position: relative;
+  line-height: 1.4rem;
+
+
+
+  * {
+    position: relative;
+    z-index: 1;
+  }
+
+  &:after {
+    display: block;
+    position: absolute;
+    top:0;
+    left: 0;
+    right: 0;
+    height: 40%;
+    margin: auto;
+    background: var(--mainBlue);
+    content: '';
+  }
+
+  .tel {
+    padding: 10px 30px;
+    color: var(--lightOrange);
+    border-radius: 25px;
+    border: 1px solid;
+    transition: all 0.2s ease;
+    &:hover {
+      color: var(--mainWhite);
+      border-color: var(--lightOrange);
+      background:var(--lightOrange) ;
+    }
+  }
+}
+

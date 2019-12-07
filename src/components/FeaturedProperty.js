@@ -29,14 +29,14 @@ class FeaturedProperty extends React.Component {
             return ('Loading');
         }
         return (
-            <div className="container">
+            <section id="featured-section" className="container">
                 <div className="row justify-content-center">
                     <h1 className="my-5 text-center">{this.props.title}</h1>
                 </div>
                 <div className="row">
                     {this.renderProperty()}
                 </div>
-            </div>
+            </section>
             )
         }
     }

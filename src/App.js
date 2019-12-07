@@ -1,5 +1,6 @@
 import React from 'react';
 import './App.scss';
+import './responsive.scss';
 import Home from "./page/Home";
 import Details from "./page/Details";
 import Property from "./page/Property";

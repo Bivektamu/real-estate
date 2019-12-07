@@ -48,7 +48,7 @@ class SortedProperty extends React.Component {
         };
 
         return (
-            <React.Fragment>
+            <section id="filtered-properties">
                 <div id="property-filter">
                     {<PropertyFilter />}
                 </div>
@@ -60,7 +60,7 @@ class SortedProperty extends React.Component {
                         {this.renderProperty()}
                     </div>
                 </div>
-            </React.Fragment>
+            </section>
             )
         }
     }

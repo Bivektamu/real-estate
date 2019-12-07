@@ -6,10 +6,10 @@ import SortedProperty from "../components/SortedProperty";
 class Property extends React.Component {
     render() {
         return (
-            <React.Fragment>
+            <main id="main">
                 <Hero page="property" />
                 <SortedProperty />
-            </React.Fragment>
+            </main>
         )
     }
 }

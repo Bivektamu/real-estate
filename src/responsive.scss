@@ -1,0 +1,23 @@
+@media screen and (max-width: 760px){
+    div#property-filter #filter-form  {
+        select {
+            width: 100%;
+            display: block;
+        }
+        select, div#range-wrapper {
+            margin-bottom: 2rem;
+        }
+
+    }
+
+    #main.property-details {
+        .text-right {
+            text-align: left!important;
+        }
+        a.tel {
+            margin: 2rem 0 0;
+            display: inline-block;
+        }
+    }
+
+}
