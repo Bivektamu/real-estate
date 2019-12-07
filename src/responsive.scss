@@ -1,4 +1,94 @@
 @media screen and (max-width: 760px){
+
+    header {
+        position: fixed;
+        transition: all 0.3s ease;
+        z-index: 9;
+        &.bg-blue {
+            background:var(--mainBlue);
+        }
+        #nav-toggle {
+            display: block;
+            width: 30px;
+            height: 30px;
+            right: 2rem;
+            position: absolute;
+            top:0;
+            bottom: 0;
+            margin: auto;
+            transition: all 0.6s ease;
+            cursor: pointer;
+            span {
+                width: 30px;
+                height: 2px;
+                top:0;
+                bottom: 0;
+                margin:auto;
+                position: absolute;
+                background: var(--mainWhite);
+                transition: all 0.6s ease;
+                &:after, &:before {
+                    width: 30px;
+                    height: 2px;
+                    background: var(--mainWhite);
+                    content: '';
+                    position: absolute;
+                    top:-10px;
+                    transition: all 0.6s ease;
+                }
+
+                &:after {
+                    top:10px;
+                }
+            }
+        }
+
+        .navbar{
+            position: fixed;
+            height: calc(100% - 72px);
+            width: 100%;
+            background: var(--mainBlue);
+            top: 72px;
+            justify-content: center;
+            align-items: center;
+            z-index: 9;
+            transform: translateX(-100%);
+            transition: all 0.6s ease;
+            .navbar-nav {
+                margin-left: 0!important;
+                .nav-link {
+                    text-align: center;
+                    position: relative;
+                    &:after {
+                        bottom: 5px;
+                    }
+                }
+            }
+            
+        }
+
+        &.active-nav {
+            #nav-toggle {
+                span {
+                    background: none;
+                    &:before {
+                        transform: rotate(45deg);
+                        top:0;
+                    }
+
+                    &:after {
+                        transform: rotate(-45deg);
+                        top:0;
+                    }
+                }
+            }
+            .navbar {
+                transform: none;
+            }
+
+        }
+    }
+
     div#property-filter #filter-form  {
         select {
             width: 100%;
@@ -7,7 +97,6 @@
         select, div#range-wrapper {
             margin-bottom: 2rem;
         }
-
     }
 
     #main.property-details {

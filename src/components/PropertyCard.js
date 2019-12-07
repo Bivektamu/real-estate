@@ -8,7 +8,9 @@ const PropertyCard = (props) => {
             <div className="card">
                 <div className="img-container">
                     <span className="status" id={status}>For {status}</span>
-                    <img className="card-img-top"   src={img} alt={title} />
+                    <Link to={`/details/${id}`}>
+                        <img className="card-img-top"   src={img} alt={title} />
+                    </Link>
                 </div>
 
                 <div className="card-footer d-flex justify-content-center flex-column">

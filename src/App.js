@@ -10,6 +10,8 @@ import Footer from './components/Footer';
 import {Route, Switch} from 'react-router-dom';
 
 class App extends React.Component {
+
+  
   render () {
     return (
         <React.Fragment>

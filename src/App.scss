@@ -53,24 +53,43 @@ a, a:hover {
   text-decoration: none;
 }
 
-header nav.navbar {
+header  {
   position: absolute;
   top:0;
   left: 0;
   z-index: 1;
   right: 0;
+  padding:0.4rem 0;
   border-bottom: 1px solid var(--grey);
-}
+  
+  #nav-toggle {
+    display:none;
+  }
 
-.navbar {
   .navbar-brand {
     font-size: 1.7rem;
     font-weight: 600;
-
+    transition: all 0.2s ease;
+    float: left;
+    padding-left: 2rem;
     span {
       color: var(--lightOrange);
+      transition: all 0.2s ease;
+      transition-delay: 0.2s;
+
+    }
+
+    &:hover {
+      color:var(--lightOrange);
+      span {
+        color: var(--mainWhite);
+      }
     }
   }
+
+}
+
+.navbar {
 
   .nav-link {
     position: relative;
@@ -200,6 +219,7 @@ header nav.navbar {
 
 footer {
   background: #F5FBFF;
+  // display: none!important;
 
   .navbar {
     .nav-link {
@@ -316,4 +336,5 @@ div#property-filter {
     }
   }
 }
+
 
